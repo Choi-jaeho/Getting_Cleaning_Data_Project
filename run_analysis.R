@@ -35,7 +35,7 @@ d_measure_mean_sd <- merged_total[, measure_mean_sd]
 
 d_activity_labels <- read.table(".//UCI HAR Dataset//activity_labels.txt",  col.names = c("activity_code", "activity_name"), stringsAsFactors = F)
 # str(d_activity_labels)
-str(merged_total[, 1:4])
+# str(merged_total[, 1:4])
 merged_total_descriptive <- merge(merged_total, d_activity_labels, by="activity_code")
 
 ## step 4
@@ -48,5 +48,3 @@ dim(second_dataset)
 
 ## save the result
 write.table(second_dataset,".//output.txt", row.names = FALSE)
-
-? write.table
